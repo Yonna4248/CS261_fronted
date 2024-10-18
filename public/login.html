@@ -14,20 +14,16 @@
             margin: 0;
             font-family: Arial, sans-serif;
         }
-        .bg-color {
-            background-color: #ffc0cb; /* กำหนดพื้นหลังเป็นสีชมพู */
-            height: 100%;
-            width: 100%;
-            position: relative;
-        }
+        
         .bg-image {
-            background-image: url('img/Picture1.png');
+            background-image: url(img/MyCat.jpg);
+            background-color: aqua;
             height: 100%;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             position: relative;
-            filter: brightness(70%);
+            filter: brightness(90%);
         }
 
         .login-container {
@@ -36,22 +32,24 @@
             left: 50%;
             transform: translate(-50%, -50%);
             width: 340px;
-            background-color: rgba(255, 255, 255, 0.85);
+            background-color: rgba(231, 59, 96, 0.85);
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-
+        .text-center img{
+            margin-bottom: 20px;
+        }
+        
         .login-form {
             margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="bg-color">
-        <div style="text-align: center;">
-            <img src="img/tu-logo.png" alt="TU-Logo" class="img-fluid">
-            <h4 class="text-center">REQUEST FORM</h4>
+    <div class="bg-image">
+    </div>
+    
         </div>    
         <div class="login-container">
             <h2 class="text-center">LOGIN</h2>
@@ -59,24 +57,25 @@
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label> <div class="input-group">
                         <span class="input-group-text"><i class="fas fa-user"></i></span>
-                        <input type="text" class="form-control" id="username" placeholder="Enter username">
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
                     <div class="input-group">
                         <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                        <input type="password" class="form-control" id="password" placeholder="Enter password">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary w-100">LOGIN</button>
             </form>
+            <p id="message"></p>
         </div>
     </div>
      <!-- Bootstrap and FontAwesome JS -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
-
+     <script src="js/script.js"></script>
 
 </body>
 </html>
